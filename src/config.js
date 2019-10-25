@@ -1,7 +1,7 @@
 const config = {
-	socketEndpoint: process.env.SOCKET_ENDPOINT || 'wss://socket.instapy.io',
-	configEndpoint: process.env.CONFIG_ENDPOINT || 'https://config.instapy.io',
-	authEndpoint: process.env.AUTH_ENDPOINT || 'https://auth.instapy.io',
+	socketEndpoint: process.env.SOCKET_ENDPOINT || 'wss://localhost',
+	configEndpoint: process.env.CONFIG_ENDPOINT || 'http://localhost',
+	authEndpoint: process.env.AUTH_ENDPOINT || 'http://localhost:4001',
 	gaTrackingID: process.env.GA_TRACKING_ID || 'UA-142315308-1'
 };
 

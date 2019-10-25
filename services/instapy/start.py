@@ -15,13 +15,13 @@ import websocket
 import requests
 
 # constants
-AUTH_ENDPOINT = os.getenv('AUTH_ENDPOINT', 'https://auth.instapy.io')
-CONFIG_ENDPOINT = os.getenv('CONFIG_ENDPOINT', 'https://config.instapy.io')
-SOCKET_ENDPOINT = os.getenv('SOCKET_ENDPOINT', 'wss://socket.instapy.io')
+AUTH_ENDPOINT = os.getenv('AUTH_ENDPOINT', 'https://localhost:4001')
+CONFIG_ENDPOINT = os.getenv('CONFIG_ENDPOINT', 'https://localhost:4002')
+SOCKET_ENDPOINT = os.getenv('SOCKET_ENDPOINT', 'wss://localhost:4005')
 IDENT = os.getenv('IDENT')
 
 if not IDENT:
-    print('IDENT not provided')
+    print('IDENT not provided! Are you sure you provided a valid .env file?')
     sys.exit(1)
 
 # globals

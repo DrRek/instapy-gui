@@ -57,3 +57,5 @@ services:
   instapy:
     build: ./services/instapy
     image: felixbreuer/instapy-client:latest
+    volumes:
+      - ./services/instapy:/usr/instapy

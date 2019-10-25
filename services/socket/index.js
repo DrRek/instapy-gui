@@ -1,5 +1,6 @@
 const WebSocket = require('ws');
 const jwt = require('jsonwebtoken');
+const dotenv = require('dotenv').config();
 
 const { JWT_SECRET , PORT } = process.env;
 const wss = new WebSocket.Server({ port: PORT || 80 });

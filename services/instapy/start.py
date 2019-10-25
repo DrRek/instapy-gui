@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 
 load_dotenv('.env')
-load_dotenv('instapy.env')
+#load_dotenv('instapy.env')
 
 
 import os
@@ -15,9 +15,9 @@ import websocket
 import requests
 
 # constants
-AUTH_ENDPOINT = os.getenv('AUTH_ENDPOINT', 'https://localhost:4001')
-CONFIG_ENDPOINT = os.getenv('CONFIG_ENDPOINT', 'https://localhost:4002')
-SOCKET_ENDPOINT = os.getenv('SOCKET_ENDPOINT', 'wss://localhost:4005')
+AUTH_ENDPOINT = os.getenv('AUTH_ENDPOINT', 'http://auth:80')
+CONFIG_ENDPOINT = os.getenv('CONFIG_ENDPOINT', 'http://config:80')
+SOCKET_ENDPOINT = os.getenv('SOCKET_ENDPOINT', 'ws://socket:80')
 IDENT = os.getenv('IDENT')
 
 if not IDENT:
@@ -62,10 +62,12 @@ def get_token(username, password):
 
     url = AUTH_ENDPOINT + '/login'
     print(f'authenticate {username} to {url} ...')
-
+    print('hello')
     response = requests.post(url, data=payload)
     response = response.json()
     if 'error' in response:
+        print('hello')
+        print(response)
         print(response['error'])
         sys.exit()
 

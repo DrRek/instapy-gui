@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const crypt = require('bcryptjs');
 const cors = require('cors');
 const validator = require('validator');
+const dotenv = require('dotenv').config();
 
 const { MONGO_URL, JWT_SECRET, PORT } = process.env;
 

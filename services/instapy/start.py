@@ -62,7 +62,6 @@ def get_token(username, password):
 
     url = AUTH_ENDPOINT + '/login'
     print(f'authenticate {username} to {url} ...')
-    print('hello')
     response = requests.post(url, data=payload)
     response = response.json()
     if 'error' in response:

@@ -57,5 +57,11 @@ services:
   instapy:
     build: ./services/instapy
     image: felixbreuer/instapy-client:latest
+    restart: unless-stopped
     volumes:
       - ./services/instapy:/usr/instapy
+    depends_on:
+      - mongo
+      - auth
+      - config
+      - socket

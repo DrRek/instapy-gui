@@ -172,6 +172,7 @@ HANDLERS['stop'] = stop
 if __name__ == '__main__':
     username = os.getenv('INSTAPY_USER')
     password = os.getenv('INSTAPY_PASSWORD')
+    print(username +" "+ password)
 
     TOKEN = get_token(username, password)
     header = {'Authorization': f'Bearer {TOKEN}'}

@@ -1,6 +1,6 @@
 const config = {
-	socketEndpoint: process.env.SOCKET_ENDPOINT || 'wss://localhost',
-	configEndpoint: process.env.CONFIG_ENDPOINT || 'http://localhost',
+	socketEndpoint: process.env.SOCKET_ENDPOINT || 'ws://localhost:4005',
+	configEndpoint: process.env.CONFIG_ENDPOINT || 'http://localhost:4002',
 	authEndpoint: process.env.AUTH_ENDPOINT || 'http://localhost:4001',
 	gaTrackingID: process.env.GA_TRACKING_ID || 'UA-142315308-1'
 };

@@ -31,3 +31,5 @@ dev/**/*
 
 # instapy
 assets
+
+*geckodriver.log

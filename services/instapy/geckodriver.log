@@ -1,0 +1,18 @@
+1572369376943	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileu1jMJ5"
+Error: no DISPLAY environment variable specified
+1572369420918	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileENaSj9"
+*** You are running in headless mode.
+1572369427712	Marionette	INFO	Listening on port 36721
+1572369427755	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox-esr/firefox-esr:81): dconf-CRITICAL **: 17:17:24.909: unable to create directory '/root/.cache/dconf': Permission denied.  dconf will not work properly.
+
+(/usr/lib/firefox-esr/firefox-esr:81): dconf-CRITICAL **: 17:17:24.910: unable to create directory '/root/.cache/dconf': Permission denied.  dconf will not work properly.
+
+(/usr/lib/firefox-esr/firefox-esr:81): dconf-CRITICAL **: 17:17:24.925: unable to create directory '/root/.cache/dconf': Permission denied.  dconf will not work properly.
+console.log: Accessibility service init or shutdown observer does not exist.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1572369648375	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilewyMYr0"
+*** You are running in headless mode.
+1572369650898	Marionette	INFO	Listening on port 36079
+1572369650984	Marionette	WARN	TLS certificate errors will be ignored for this session

@@ -65,3 +65,5 @@ services:
       - auth
       - config
       - socket
+    environment:
+      WAIT_HOSTS: mongo:27017

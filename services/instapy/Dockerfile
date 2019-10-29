@@ -13,4 +13,8 @@ RUN sed -i "s#deb http://deb.debian.org/debian buster main#deb http://deb.debian
 	
 RUN pip3 install -r requirements.txt;
 
-CMD ["python3", "-u", "start.py"]
+## This is used to wait for mongo (specified in the docker-compose file)
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
+RUN chmod +x /wait
+
+CMD ["./wait" "&&", "python3", "-u", "start.py"]

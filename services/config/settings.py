@@ -4,8 +4,9 @@ from database import client
 from auth import to_json, jwt_req, encode, decode
 import json
 from bson.json_util import dumps
+import sys
 
-CIPHER_SECRET = getenv('CIPHER_SECRET') or 'instapysecret'
+CIPHER_SECRET = getenv('CIPHER_SECRET') or '59sWiJrJbjK6Zpc0iTxWR39fo6YCVgg_sfhl2nCsxo0='
 settings = Blueprint('settings', __name__)
 
 
@@ -16,7 +17,7 @@ def coding_wrapper(text, func):
     try:
         return func(text, CIPHER_SECRET)
     except Exception as e:
-        print('error in coding wrapper', e)
+        print('error in coding wrapper', e, file=sys.stderr)
         return None
 
 
@@ -44,7 +45,6 @@ def get_setting(payload, setting):
         {'username': payload['username'], 'ident': setting}
     )
     result = json.loads(dumps(result))
-
     # decode instagram credentials
     for param in result['params']:
         if param['name'] != 'username' and param['name'] != 'password':

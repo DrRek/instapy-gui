@@ -5,6 +5,8 @@ from flask import request, current_app
 from os import getenv
 from bson.json_util import dumps
 from cryptography.fernet import Fernet
+import sys                              #used by print('',file=sys.stderr)
+import base64
 
 SECRET = getenv('JWT_SECRET') or 'instapysecret'
 

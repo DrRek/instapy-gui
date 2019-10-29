@@ -42,6 +42,7 @@ def on_message(ws, message):
     HANDLERS[data['handler']](ws, data)
 
 
+
 def on_error(ws, error):
     print('error:', error)
 
@@ -142,7 +143,7 @@ def start(ws, data):
     ienv['SOCKET'] = SOCKET_ENDPOINT
     ienv['CONFIG'] = CONFIG_ENDPOINT
     ienv['IDENT'] = IDENT
-
+    
     if platform.system() == 'Windows':
         PROCESS = subprocess.Popen(
             [sys.executable, 'bot.py'],
